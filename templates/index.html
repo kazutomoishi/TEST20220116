@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaiga Bunrui</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+    <header>
+        <img class="header_img" src="/static/Vincent_van_Gogh_99.jpg" alt="Gogh">
+        <a class="header-logo" href="#">Kaiga Classifier</a>
+    </header>
+
+    <div class="main">
+        <h2> AIが送信された作品の作家をゴッホか？カンディンスキーか？を識別します</h2>
+        <h3> どちらの作品でもない場合はゴッホ的か？カンディンスキー的か？の推定をします</h3>
+        <p>画像を送信してください</p>
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="submit!" type="submit">
+        </form>
+    </div>
+    <div class="answer">{{answer}}</div>
+    <center><h4>uploadされた画像</h4>
+      <img src="{{ filepath }}" alt="xxx" title="xxx">
+
+    <footer>
+        <img class="footer_img" src="/static/Vasiliy_Kandinskiy_86.png" alt="Kandinskiy">
+        <small>&copy; 2023 Yukari LLC, inc.</small>
+    </footer>
+</body>
+</html>
